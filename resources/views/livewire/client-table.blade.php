@@ -7,6 +7,7 @@
                 <th class="py-3 px-4">Name</th>
                 <th class="py-3 px-4">Email</th>
                 <th class="py-3 px-4">Company Name</th>
+                <th class="py-3 px-4">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -15,6 +16,11 @@
                     <td class="py-3 px-4">{{ $client->name .' '.$client->last_name }}</td>
                     <td class="py-3 px-4">{{ $client->email }}</td>
                     <td class="py-3 px-4">{{ $client->business_name }}</td>
+                    <td class="py-3 px-4">
+                        <button class="bg-gray-700 hover:bg-gray-600 text-indigo-300 font-medium py-1 px-3 rounded text-xs transition cursor-pointer">
+                            EDIT
+                        </button>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
