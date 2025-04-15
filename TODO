@@ -1,1 +1,4 @@
-1. start with single client form as liwewire component
+1. list of all clients
+2. edit button for each row (just FE, doesn't have to work)
+3. implement search
+4. implement sorting
