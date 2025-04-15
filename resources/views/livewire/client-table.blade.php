@@ -6,15 +6,17 @@
             <tr>
                 <th class="py-3 px-4">Name</th>
                 <th class="py-3 px-4">Email</th>
-                <th class="py-3 px-4">Status</th>
+                <th class="py-3 px-4">Company Name</th>
             </tr>
         </thead>
         <tbody>
-            <tr class="hover:bg-gray-700 transition">
-                <td class="py-3 px-4">John Doe</td>
-                <td class="py-3 px-4">john@example.com</td>
-                <td class="py-3 px-4 text-emerald-400">Active</td>
-            </tr>
+            @foreach($clients as $client)
+                <tr class="hover:bg-gray-700 transition">
+                    <td class="py-3 px-4">{{ $client->name .' '.$client->last_name }}</td>
+                    <td class="py-3 px-4">{{ $client->email }}</td>
+                    <td class="py-3 px-4">{{ $client->business_name }}</td>
+                </tr>
+            @endforeach
         </tbody>
     </table>
 </div>
