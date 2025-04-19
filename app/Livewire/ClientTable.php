@@ -4,18 +4,26 @@ namespace App\Livewire;
 
 use App\Models\Client;
 use Livewire\Component;
+use Illuminate\Database\Eloquent\Builder;
 
 class ClientTable extends Component
 {
-    public $clients;
-
-    public function mount()
-    {
-        $this->clients = Client::all();
-    }
+    public string $search = '';
 
     public function render()
     {
-        return view('livewire.client-table');
+        $clients = Client::query()
+            ->where('name', 'like', '%'.$this->search.'%')
+            ->orWhere('last_name', 'like', '%'.$this->search.'%')
+            ->orWhere('email', 'like', '%'.$this->search.'%')
+            ->orWhere('business_name', 'like', '%'.$this->search.'%')
+            ->get();
+
+        // $clients = Client::where('name', 'like', '%Mar%')
+        //     ->get();
+
+        return view('livewire.client-table', [
+            'clients' => $clients,
+        ]);
     }
 }
