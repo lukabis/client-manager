@@ -4,7 +4,6 @@ namespace App\Livewire;
 
 use App\Models\Client;
 use Livewire\Component;
-use Illuminate\Database\Eloquent\Builder;
 
 class ClientTable extends Component
 {
