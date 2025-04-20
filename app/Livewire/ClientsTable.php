@@ -5,7 +5,7 @@ namespace App\Livewire;
 use App\Models\Client;
 use Livewire\Component;
 
-class ClientTable extends Component
+class ClientSTable extends Component
 {
     public string $search = '';
 
@@ -18,7 +18,7 @@ class ClientTable extends Component
             ->orWhere('business_name', 'like', '%'.$this->search.'%')
             ->get();
 
-        return view('livewire.client-table', [
+        return view('livewire.clients-table', [
             'clients' => $clients,
         ])->layout('layouts.app');
     }
