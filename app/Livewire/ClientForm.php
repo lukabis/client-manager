@@ -8,6 +8,7 @@ use Livewire\Component;
 class ClientForm extends Component
 {
     public $client;
+
     public array $form = [];
 
     public function mount(Client $client)
