@@ -1,4 +1,5 @@
 1. list of all clients DONE
 2. edit button for each row (just FE, doesn't have to work) DONE
 3. implement search DONE
-4. implement sorting
+4. implement single client form
+    -> make livewire comopnent for client-form

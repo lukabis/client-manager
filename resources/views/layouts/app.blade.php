@@ -8,7 +8,7 @@
 </head>
 <body class="antialiased bg-gray-900 text-gray-100">
     <div class="container mx-auto py-6">
-        @yield('content')
+        {{ $slot }}
     </div>
 
     @livewireScripts

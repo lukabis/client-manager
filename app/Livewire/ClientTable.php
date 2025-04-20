@@ -18,11 +18,8 @@ class ClientTable extends Component
             ->orWhere('business_name', 'like', '%'.$this->search.'%')
             ->get();
 
-        // $clients = Client::where('name', 'like', '%Mar%')
-        //     ->get();
-
         return view('livewire.client-table', [
             'clients' => $clients,
-        ]);
+        ])->layout('layouts.app');
     }
 }
