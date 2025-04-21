@@ -1,4 +1,4 @@
-<div>
+<div class="m-4">
 
     <div class="mb-10 flex items-center">
         <a href="{{ route('clients-table') }}" class="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition">
