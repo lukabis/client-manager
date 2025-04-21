@@ -16,7 +16,7 @@
                 <label for="name" class="block text-gray-400 text-sm font-medium mb-2">First Name</label>
                 <input type="text" id="name" wire:model.live="form.name"
                     class="w-full bg-gray-700 text-gray-100 placeholder-gray-400 border border-gray-600 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 @error('name') border-red-500 @enderror">
-                @error('name') 
+                @error('form.name') 
                     <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
                 @enderror
             </div>
@@ -26,7 +26,7 @@
                 <label for="last_name" class="block text-gray-400 text-sm font-medium mb-2">Last Name</label>
                 <input type="text" id="last_name" wire:model="form.last_name" 
                     class="w-full bg-gray-700 text-gray-100 placeholder-gray-400 border border-gray-600 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 @error('last_name') border-red-500 @enderror">
-                @error('last_name') 
+                @error('form.last_name') 
                     <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
                 @enderror
             </div>
@@ -36,7 +36,7 @@
                 <label for="email" class="block text-gray-400 text-sm font-medium mb-2">Email</label>
                 <input type="email" id="email" wire:model="form.email" 
                     class="w-full bg-gray-700 text-gray-100 placeholder-gray-400 border border-gray-600 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 @error('email') border-red-500 @enderror">
-                @error('email') 
+                @error('form.email') 
                     <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
                 @enderror
             </div>
@@ -46,7 +46,7 @@
                 <label for="phone" class="block text-gray-400 text-sm font-medium mb-2">Phone</label>
                 <input type="tel" id="phone" wire:model="form.phone" 
                     class="w-full bg-gray-700 text-gray-100 placeholder-gray-400 border border-gray-600 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 @error('phone') border-red-500 @enderror">
-                @error('phone') 
+                @error('form.phone') 
                     <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
                 @enderror
             </div>
@@ -61,7 +61,7 @@
                     <label for="business_name" class="block text-gray-400 text-sm font-medium mb-2">Company Name</label>
                     <input type="text" id="business_name" wire:model="form.business_name" 
                         class="w-full bg-gray-700 text-gray-100 placeholder-gray-400 border border-gray-600 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 @error('business_name') border-red-500 @enderror">
-                    @error('business_name') 
+                    @error('form.business_name') 
                         <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
                     @enderror
                 </div>
@@ -92,17 +92,17 @@
             <label for="notes" class="block text-gray-400 text-sm font-medium mb-2">Notes</label>
             <textarea id="notes" wire:model="form.notes" rows="4" 
                 class="w-full bg-gray-700 text-gray-100 placeholder-gray-400 border border-gray-600 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 @error('notes') border-red-500 @enderror"></textarea>
-            @error('notes') 
+            @error('form.notes') 
                 <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
             @enderror
         </div>
         
         <!-- Buttons -->
         <div class="flex justify-end space-x-3">
-            <button type="button" wire:click="cancel" 
+            <a href="{{ route('clients-table') }}" type="button" wire:click="cancel" 
                 class="bg-gray-700 hover:bg-gray-600 text-gray-300 font-medium py-2 px-4 rounded transition">
                 Cancel
-            </button>
+            </a>
             <button type="submit" 
                 class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded transition">
                 {{ isset($client) ? 'Update Client' : 'Save Client' }}
