@@ -3,26 +3,29 @@
 namespace App\Livewire;
 
 use App\Models\Client;
+use Livewire\Features\SupportRedirects\Redirector;
+use Illuminate\Http\RedirectResponse;
 use Livewire\Component;
+use Illuminate\Contracts\View\View;
 
 class ClientForm extends Component
 {
-    public $client;
+    public Client $client;
 
     public array $form = [];
 
-    public function mount(Client $client)
+    public function mount(Client $client): void
     {
         $this->client = $client;
         $this->form = $client->toArray();
     }
 
-    public function render()
+    public function render(): View
     {
         return view('livewire.client-form')->layout('layouts.app');
     }
 
-    public function update()
+    public function update(): Redirector|RedirectResponse
     {
         $validated = $this->validate([
             'form.name' => 'required|string|max:255',
@@ -36,6 +39,6 @@ class ClientForm extends Component
         
         session()->flash('message', 'Client updated successfully!');
         
-        return redirect()->route('clients-table');
+        return redirect()->back();
     }
 }

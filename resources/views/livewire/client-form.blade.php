@@ -96,6 +96,14 @@
                 <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
             @enderror
         </div>
+
+        @session('message')
+            <div class="mb-6">
+                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+                    <span class="block sm:inline">{{ session('message') }}</span>
+                </div>
+            </div>
+        @endsession
         
         <!-- Buttons -->
         <div class="flex justify-end space-x-3">

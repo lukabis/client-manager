@@ -3,13 +3,14 @@
 namespace App\Livewire;
 
 use App\Models\Client;
+use Illuminate\View\View;
 use Livewire\Component;
 
 class ClientSTable extends Component
 {
     public string $search = '';
 
-    public function render()
+    public function render(): View
     {
         $clients = Client::query()
             ->where('name', 'like', '%'.$this->search.'%')
