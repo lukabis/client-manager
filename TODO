@@ -1,5 +1,4 @@
-1. list of all clients DONE
-2. edit button for each row (just FE, doesn't have to work) DONE
-3. implement search DONE
-4. implement single client form
+1. remove industry field (or add it?)
+2. implement single client form
     -> make 'create new client' work
+3. readme file  
