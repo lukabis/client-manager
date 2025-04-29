@@ -1,4 +1,5 @@
 1. remove industry field (or add it?)
 2. implement single client form
     -> make 'create new client' work
+2.1 Tests for livewire component
 3. readme file  
