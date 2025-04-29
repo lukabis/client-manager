@@ -65,25 +65,6 @@
                         <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
                     @enderror
                 </div>
-                
-                <!-- Industry -->
-                <div>
-                    <label for="industry" class="block text-gray-400 text-sm font-medium mb-2">Industry</label>
-                    <select id="industry" wire:model="industry" 
-                        class="w-full bg-gray-700 text-gray-100 border border-gray-600 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 @error('industry') border-red-500 @enderror">
-                        <option value="">Select an industry</option>
-                        <option value="Technology">Technology</option>
-                        <option value="Finance">Finance</option>
-                        <option value="Healthcare">Healthcare</option>
-                        <option value="Retail">Retail</option>
-                        <option value="Manufacturing">Manufacturing</option>
-                        <option value="Services">Services</option>
-                        <option value="Other">Other</option>
-                    </select>
-                    @error('industry') 
-                        <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
-                    @enderror
-                </div>
             </div>
         </div>
         
