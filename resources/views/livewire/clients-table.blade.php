@@ -1,6 +1,15 @@
 <div>
     <div class="bg-gray-800 rounded-xl shadow p-6 m-2">
-        <h1 class="text-2xl font-bold text-indigo-400 mb-4">Clients</h1>
+        <div class="flex items-center justify-between mb-4">
+            <h1 class="text-2xl font-bold text-indigo-400 mb-4">Clients</h1>
+
+            <a href="/client" class="inline-flex items-center justify-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded transition whitespace-nowrap">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
+                </svg>
+                New Client
+            </a>
+        </div>
 
         <div class="mb-4">
             <input
