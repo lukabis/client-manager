@@ -51,7 +51,7 @@ class ClientForm extends Component
         $validated = $this->validate([
             'form.name' => 'required|string|max:255',
             'form.last_name' => 'required|string|max:255',
-            'form.email' => 'required|email|unique:clients,email,'.$this->client->id,
+            'form.email' => 'required|email|unique:clients,email',
             'form.phone' => 'nullable|string',
             'form.business_name' => 'nullable|string',
         ]);
