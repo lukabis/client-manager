@@ -3,10 +3,10 @@
 namespace App\Livewire;
 
 use App\Models\Client;
-use Livewire\Features\SupportRedirects\Redirector;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Livewire\Component;
-use Illuminate\Contracts\View\View;
+use Livewire\Features\SupportRedirects\Redirector;
 
 class ClientForm extends Component
 {
@@ -38,11 +38,11 @@ class ClientForm extends Component
             'form.phone' => 'nullable|string',
             'form.business_name' => 'nullable|string',
         ]);
-        
+
         $this->client->update($this->form);
-        
+
         session()->flash('message', 'Client updated successfully!');
-        
+
         return redirect()->back();
     }
 
@@ -57,7 +57,7 @@ class ClientForm extends Component
         ]);
 
         Client::create($this->form);
-        
+
         return redirect()->back();
     }
 }
