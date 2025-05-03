@@ -42,6 +42,10 @@ Client Manager is a demonstration application showcasing Laravel Livewire's capa
 ### Setup Instructions
 
 1. **Clone the repository**
+    ```bash
+    git clone git@github.com:lukabis/client-manager.git
+    cd client-manager
+    ```
 
 2. **Install PHP dependencies**
 
@@ -61,24 +65,73 @@ Client Manager is a demonstration application showcasing Laravel Livewire's capa
     ./vendor/bin/sail up -d
     ```
 
-5. **Install frontend dependencies**
+5. **Generate application key**
+
+    ```bash
+    ./vendor/bin/sail artisan key:generate
+    ```
+
+6. **Install frontend dependencies**
 
     ```bash
     npm install
     ```
 
-6. **Run database migrations**
+7. **Run database migrations**
 
     ```bash
     ./vendor/bin/sail artisan migrate
     ```
 
-7. **Start the Vite development server**
+8. **Start the Vite development server**
 
     ```bash
     npm run dev
     ```
 
-8. **Access the application**
+9. **Access the application**
 
     Open your browser and visit http://localhost
+
+
+## 🧪 Testing
+
+The application includes comprehensive tests for Livewire components. To run the tests
+
+```bash
+./vendor/bin/sail artisan test
+```
+
+### Test Coverage
+
+- Form validation tests
+- Client creation tests
+- Client update tests
+- Component rendering tests
+
+
+## 🧠 Learning Laravel Livewire
+
+This project demonstrates several Livewire concepts:
+
+- Component lifecycle hooks
+- Real-time validation
+- Form handling
+- Component testing
+- Laravel integration
+
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+1. Fork the repository
+2. Create your feature branch (git checkout -b feature/amazing-feature)
+3. Commit your changes (git commit -m 'Add some amazing feature')
+4. Push to the branch (git push origin feature/amazing-feature)
+5. Open a Pull Request
+
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
