@@ -58,6 +58,8 @@ class ClientForm extends Component
 
         Client::create($this->form);
 
+        session()->flash('message', 'Client created successfully!');
+
         return redirect()->back();
     }
 }
