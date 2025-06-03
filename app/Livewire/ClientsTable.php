@@ -6,7 +6,7 @@ use App\Models\Client;
 use Illuminate\View\View;
 use Livewire\Component;
 
-class ClientSTable extends Component
+class ClientsTable extends Component
 {
     public string $search = '';
 
